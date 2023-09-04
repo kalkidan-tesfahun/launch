@@ -5,9 +5,72 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./images/illustration_welcome.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: #1b1c1d; */
+  /* background-image: url(./images/illustration_welcome.svg);
+  
+  background-size: contain; */
 }
+.aws-btn--primary .aws-btn__content {
+  background: #ff9c37;
+  color: var(--button-primary-color-light);
+  border: var(--button-primary-border);
 
+}
+.aws-btn--middle  {
+  background: #ff9c37;/* Set your desired transform value here */
+}
+.aws-btn--primary .aws-btn__wrapper:before {
+  background: #c76809;
+}
+.aws-btn {
+  --button-primary-color-hover:#ff9c37 ;
+  --button-primary-color-active: #c76809;
+ }
+#allBack{
+
+}
+#typeanimation {
+  align-self: center;
+}
+#App {
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.rocket {
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rocket.launching {
+  animation: rocketLaunch 5s linear;
+  transform: translateY(-400px);
+}
+
+@keyframes rocketLaunch {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-400px);
+  }
+}
+
+#report{
+  width: 85%;
+  margin-top: 5%;
+
+}
+#animate{
+  font-size: 440%;
+  margin-top: 20%;
 }

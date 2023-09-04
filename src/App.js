@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import HomepageLayout from './core/home/home_index';
+import { ReportIndex } from './core/Report/report_index';
+import { ConfettiIndex } from './core/conffetty/Confetti';
+import Rocket from './core/launch/launch_index';
+import LottieControl from './core/launch/launch_index';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div >
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomepageLayout />}/>
+      <Route path="/confetti" element={<ConfettiIndex />} />
+      <Route path="/report" element={<ReportIndex />} />
+  
+    </Routes>
+  </BrowserRouter>
+  </div>
   );
+
 }
 
 export default App;
